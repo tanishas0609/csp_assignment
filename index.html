@@ -1,56 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AI Smart Home Control Panel</title>
   <style>
     body {
-      background-color: #1a1a2e;
-      color: white;
-      font-family: Arial, sans-serif;
+      background-color: lightblue;
       text-align: center;
-      padding: 40px;
+      font-family: Arial;
     }
 
     h1 {
-      color: #a0c4ff;
-      font-size: 2rem;
+      color: navy;
     }
 
     h2 {
-      color: #90ee90;
-      font-size: 1.2rem;
-      margin-top: 10px;
+      color: green;
     }
 
     img {
       width: 150px;
-      margin: 20px;
     }
 
     #security-alert {
-      background-color: darkred;
+      background-color: red;
       color: white;
       padding: 10px;
-      border-radius: 5px;
-      display: inline-block;
-      margin: 10px;
     }
 
     button {
-      background-color: #a0c4ff;
-      color: black;
-      border: none;
-      padding: 10px 20px;
-      margin: 8px;
-      font-size: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #74a9ff;
+      background-color: navy;
+      color: white;
+      padding: 10px;
+      margin: 5px;
+      font-size: 16px;
     }
   </style>
 </head>
@@ -60,15 +42,11 @@
 
   <h2 id="system-status">System Status: Secure</h2>
 
-  <br>
-
   <img
     id="device-image"
-    src="https://cdn-icons-png.flaticon.com/512/3176/3176330.png"
+    src="https://cdn-icons-png.flaticon.com/512/1252/1252743.png"
     alt="Device status"
   />
-
-  <br>
 
   <p id="security-alert" hidden>⚠️ ALERT: Backyard Motion Detected!</p>
 
@@ -87,10 +65,10 @@
     function toggleLamp() {
       var img = document.getElementById("device-image");
 
-      if (img.src.endsWith("3176330.png")) {
-        img.src = "https://cdn-icons-png.flaticon.com/512/3176/3176363.png";
+      if (img.src.endsWith("1252743.png")) {
+        img.src = "https://cdn-icons-png.flaticon.com/512/1252/1252756.png";
       } else {
-        img.src = "https://cdn-icons-png.flaticon.com/512/3176/3176330.png";
+        img.src = "https://cdn-icons-png.flaticon.com/512/1252/1252743.png";
       }
     }
 
