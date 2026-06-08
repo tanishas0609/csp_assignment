@@ -44,8 +44,8 @@
 
   <img
     id="device-image"
-    src="https://cdn-icons-png.flaticon.com/512/1252/1252743.png"
-    alt="Device status"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Light_bulb_off.svg/200px-Light_bulb_off.svg.png"
+    alt="Lightbulb off"
   />
 
   <p id="security-alert" hidden>⚠️ ALERT: Backyard Motion Detected!</p>
@@ -65,10 +65,10 @@
     function toggleLamp() {
       var img = document.getElementById("device-image");
 
-      if (img.src.endsWith("1252743.png")) {
-        img.src = "https://cdn-icons-png.flaticon.com/512/1252/1252756.png";
+      if (img.src.includes("off")) {
+        img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Light_bulb_lit.svg/200px-Light_bulb_lit.svg.png";
       } else {
-        img.src = "https://cdn-icons-png.flaticon.com/512/1252/1252743.png";
+        img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Light_bulb_off.svg/200px-Light_bulb_off.svg.png";
       }
     }
 
