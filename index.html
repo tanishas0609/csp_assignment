@@ -17,8 +17,8 @@
       color: green;
     }
 
-    img {
-      width: 150px;
+    #bulb {
+      font-size: 100px;
     }
 
     #security-alert {
@@ -42,11 +42,7 @@
 
   <h2 id="system-status">System Status: Secure</h2>
 
-  <img
-    id="device-image"
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Light_bulb_off.svg/200px-Light_bulb_off.svg.png"
-    alt="Lightbulb off"
-  />
+  <p id="bulb">💡</p>
 
   <p id="security-alert" hidden>⚠️ ALERT: Backyard Motion Detected!</p>
 
@@ -63,12 +59,12 @@
     }
 
     function toggleLamp() {
-      var img = document.getElementById("device-image");
+      var bulb = document.getElementById("bulb");
 
-      if (img.src.includes("off")) {
-        img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Light_bulb_lit.svg/200px-Light_bulb_lit.svg.png";
+      if (bulb.textContent === "💡") {
+        bulb.textContent = "🌑";
       } else {
-        img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Light_bulb_off.svg/200px-Light_bulb_off.svg.png";
+        bulb.textContent = "💡";
       }
     }
 
