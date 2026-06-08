@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Smart Home Control Panel</title>
+  <style>
+    body {
+      background-color: #1a1a2e;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #a0c4ff;
+      font-size: 2rem;
+    }
+
+    h2 {
+      color: #90ee90;
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    img {
+      width: 150px;
+      margin: 20px;
+    }
+
+    #security-alert {
+      background-color: darkred;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    button {
+      background-color: #a0c4ff;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      margin: 8px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #74a9ff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>AI Smart Home Control Panel</h1>
+
+  <h2 id="system-status">System Status: Secure</h2>
+
+  <br>
+
+  <img
+    id="device-image"
+    src="https://cdn-icons-png.flaticon.com/512/3176/3176330.png"
+    alt="Device status"
+  />
+
+  <br>
+
+  <p id="security-alert" hidden>⚠️ ALERT: Backyard Motion Detected!</p>
+
+  <br>
+
+  <button onclick="triggerAlarm()">Trigger Alarm</button>
+  <button onclick="toggleLamp()">Toggle Living Room Lamp</button>
+  <button onclick="dismissAlert()">Dismiss Alert</button>
+
+  <script>
+    function triggerAlarm() {
+      document.getElementById("system-status").textContent = "System Status: 🚨 BREACH DETECTED!";
+      document.getElementById("security-alert").hidden = false;
+    }
+
+    function toggleLamp() {
+      var img = document.getElementById("device-image");
+
+      if (img.src.endsWith("3176330.png")) {
+        img.src = "https://cdn-icons-png.flaticon.com/512/3176/3176363.png";
+      } else {
+        img.src = "https://cdn-icons-png.flaticon.com/512/3176/3176330.png";
+      }
+    }
+
+    function dismissAlert() {
+      document.getElementById("security-alert").hidden = true;
+      document.getElementById("system-status").textContent = "System Status: Secure";
+    }
+  </script>
+
+</body>
+</html>
